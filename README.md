@@ -1,6 +1,6 @@
-#### 🏙️ Civic Issue App
+# 🏙️ Civic Issue App
 
-A mobile + backend platform that lets citizens report civic issues, track their resolution, and collaborate with local authorities. Built for Jharkhand & Bihar communities.  
+A mobile + backend platform that lets citizens report civic issues, track their resolution, and collaborate with local authorities. Built for Jharkhand & Bihar communities. SIH 2025 project  
 
 
 ## 🚀 Features
