@@ -160,6 +160,8 @@ Open source under the [MIT License](LICENSE).
 
 ### 🚀 GitHub About (Tagline)
 
+---
+
 > A citizen-driven platform to report, track, and resolve civic issues — built with FastAPI, React Native, and MongoDB Atlas.
 
 ```
