@@ -1,97 +1,176 @@
-🏙️ Civic Issue App
+Got it 👍 — here’s your full **README.md** in clean **Markdown format** (you can copy-paste directly into your repo).
 
-A modern civic engagement platform where citizens can report issues, track their status, and collaborate with local authorities. Built with React Native (frontend) and FastAPI + MongoDB (backend).
+---
 
-🚀 Features
+```markdown
+# 🏙️ Civic Issue App
 
-📌 User Authentication (Signup/Login with JWT)
+A mobile + backend platform that lets citizens report civic issues, track their resolution, and collaborate with local authorities. Built for Jharkhand & Bihar communities.  
 
-📝 Report Civic Issues with description, images, and location
+---
 
-📍 Location Integration (Google Maps / GPS support)
+## 🚀 Features
 
-📊 Issue Tracking (track status: Submitted → In Progress → Resolved)
+- **User Authentication** (Signup / Login with JWT)  
+- **Report Issues** with title, description, category, image, and location  
+- **Track Issue Status**: Pending → In Progress → Resolved  
+- **Upvotes & Community Engagement** — issues can be upvoted to show priority  
+- **Rewards System** — users earn points for reporting, upvotes, and resolved issues, redeemable for vouchers  
+- **Secure Backend** using MongoDB Atlas  
 
-👥 Community Engagement (vote/comment on issues)
+---
 
-🔐 Secure backend with MongoDB Atlas
+## 🧰 Tech Stack
 
-🛠️ Tech Stack
+| Component        | Technology                          |
+|------------------|--------------------------------------|
+| Frontend         | React Native (Expo)                 |
+| Backend          | FastAPI (Python)                    |
+| Database         | MongoDB Atlas                       |
+| Auth             | JWT (JSON Web Tokens)               |
+| Hosting / DevOps | Local, easily deployed to cloud     |
 
-Frontend: React Native (Expo)
-Backend: FastAPI (Python)
-Database: MongoDB Atlas
-Auth: JWT Authentication
-Hosting: Local / Cloud deployment ready
+---
 
-📂 Project Structure
+## 📁 Project Structure
+
+```
+
 Civic-Issue-App/
-├── backend/         # FastAPI server code
-│   ├── main.py      # Entry point
-│   ├── database.py  # MongoDB connection
-│   └── routes/      # API routes
-├── frontend/        # React Native mobile app
-│   ├── App.js       # Main app entry
-│   └── screens/     # UI screens
-└── README.md
+├── backend/          # FastAPI server
+│   ├── main.py       # Entry point
+│   ├── database.py   # MongoDB connection & indexes
+│   ├── models/       # Pydantic models
+│   ├── routers/      # API route modules
+│   └── utils/        # Helpers like auth, points logic
+├── frontend/         # React Native app
+│   ├── App.js        # Main entry file
+│   └── screens/      # UI screen components
+└── README.md         # This file
 
-⚡ Getting Started
-1. Clone the repo
-git clone https://github.com/krisjscott/Civic-Issue-App.git
-cd Civic-Issue-App
+````
 
-2. Backend Setup
-cd backend
-python -m venv .venv
-. .venv/Scripts/activate    # Windows
-source .venv/bin/activate   # Mac/Linux
+---
 
-pip install -r requirements.txt
+## 🔧 Getting Started
 
+### Prerequisites
 
-Create a .env file:
+- Python 3.10+  
+- Node.js & npm / Yarn  
+- MongoDB Atlas account  
 
-MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net
-SECRET_KEY=your_jwt_secret
-ALGORITHM=HS256
+---
 
+### Backend Setup
 
-Run the backend:
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/krisjscott/Civic-Issue-App.git
+   cd Civic-Issue-App/backend
+````
 
-uvicorn main:app --reload
+2. **Create virtual environment and activate it**
 
+   * **Windows (PowerShell)**:
 
-Visit http://127.0.0.1:8000/docs
- for Swagger UI.
+     ```powershell
+     python -m venv .venv
+     . .venv\Scripts\Activate.ps1
+     ```
+   * **Mac / Linux**:
 
-3. Frontend Setup
-cd frontend
-npm install
-npm start
+     ```bash
+     python3 -m venv .venv
+     source .venv/bin/activate
+     ```
 
+3. **Install backend dependencies**
 
-Use Expo Go (mobile app) to scan the QR code and run on your phone.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-✅ API Endpoints
-Method	Endpoint	Description
-POST	/auth/signup	Register new user
-POST	/auth/login	Login user & get token
-POST	/issues/	Submit new issue
-GET	/issues/	Get all issues
-GET	/issues/{id}	Get issue by ID
-PUT	/issues/{id}	Update issue status
-🤝 Contributing
+4. **Setup environment variables** (create `.env` file in `backend/`)
 
-Fork this repo
+   ```ini
+   APP_MONGO_URI="mongodb+srv://hackathon_user:YourPassword@krish.donzfdl.mongodb.net/civic_control?retryWrites=true&w=majority&appName=CivicIssueApp"
+   APP_MONGO_DB="civic_control"
+   APP_JWT_SECRET="your_jwt_secret_here"
+   APP_JWT_ISSUER="civic_control"
+   APP_JWT_EXP_MINUTES=10080  # 7 days
+   ```
 
-Create a branch: git checkout -b feature-name
+5. **Run the backend**
 
-Commit changes: git commit -m 'Added new feature'
+   ```bash
+   uvicorn main:app --reload
+   ```
 
-Push branch: git push origin feature-name
+6. Open Swagger docs at:
+   [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-Submit a Pull Request 🎉
+---
 
-📜 License
+### Frontend Setup (coming soon)
 
-This project is licensed under the MIT License.
+> *Note: Add instructions once the React Native frontend is ready.*
+
+1. Go into `frontend/`
+
+   ```bash
+   cd ../frontend
+   ```
+
+2. Install dependencies
+
+   ```bash
+   npm install
+   npm start
+   ```
+
+3. Use Expo Go (iOS / Android) to preview app on your phone.
+
+---
+
+## 🎯 API Endpoints (Examples)
+
+| Method  | Endpoint              | Description                     |
+| ------- | --------------------- | ------------------------------- |
+| `POST`  | `/auth/signup`        | Register a new user             |
+| `POST`  | `/auth/login`         | Log in and get JWT token        |
+| `POST`  | `/issues/`            | Report a new civic issue        |
+| `GET`   | `/issues/mine`        | Get issues submitted by me      |
+| `GET`   | `/issues/`            | Admin: fetch all issues         |
+| `POST`  | `/issues/{id}/upvote` | Upvote a specific issue         |
+| `PATCH` | `/issues/{id}/status` | Admin: update an issue’s status |
+| `POST`  | `/rewards/redeem`     | Redeem points for a voucher     |
+
+---
+
+## 💡 Contribution & Ideas
+
+We welcome contributions, suggestions, and improvements.
+
+* If you find bugs → create an issue
+* Want to add a feature? Fork, build, and send a pull request
+* Some future ideas: heat maps, multilingual support, SMS fallback, better mobile UI
+
+---
+
+## 📜 License
+
+Open source under the [MIT License](LICENSE).
+
+---
+
+## 🚀 GitHub About (Tagline)
+
+> A citizen-driven platform to report, track, and resolve civic issues — built with FastAPI, React Native, and MongoDB Atlas.
+
+```
+
+---
+
+Do you also want me to **add shields.io badges** (Python, FastAPI, MongoDB, React Native, License) at the top so your README looks more professional?
+```
