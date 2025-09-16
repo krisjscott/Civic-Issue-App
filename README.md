@@ -1,8 +1,3 @@
-Got it 👍 — here’s your full **README.md** in clean **Markdown format** (you can copy-paste directly into your repo).
-
----
-
-```markdown
 # 🏙️ Civic Issue App
 
 A mobile + backend platform that lets citizens report civic issues, track their resolution, and collaborate with local authorities. Built for Jharkhand & Bihar communities.  
