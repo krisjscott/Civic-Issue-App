@@ -1,4 +1,4 @@
-### 🏙️ Civic Issue App
+#### 🏙️ Civic Issue App
 
 A mobile + backend platform that lets citizens report civic issues, track their resolution, and collaborate with local authorities. Built for Jharkhand & Bihar communities.  
 
@@ -62,7 +62,7 @@ Civic-Issue-App/
    ```bash
    git clone https://github.com/krisjscott/Civic-Issue-App.git
    cd Civic-Issue-App/backend
-````
+``
 
 2. **Create virtual environment and activate it**
 
@@ -127,7 +127,7 @@ Civic-Issue-App/
 
 ---
 
-## 🎯 API Endpoints (Examples)
+### 🎯 API Endpoints (Examples)
 
 | Method  | Endpoint              | Description                     |
 | ------- | --------------------- | ------------------------------- |
@@ -142,7 +142,7 @@ Civic-Issue-App/
 
 ---
 
-## 💡 Contribution & Ideas
+### 💡 Contribution & Ideas
 
 We welcome contributions, suggestions, and improvements.
 
@@ -152,13 +152,13 @@ We welcome contributions, suggestions, and improvements.
 
 ---
 
-## 📜 License
+### 📜 License
 
 Open source under the [MIT License](LICENSE).
 
 ---
 
-## 🚀 GitHub About (Tagline)
+### 🚀 GitHub About (Tagline)
 
 > A citizen-driven platform to report, track, and resolve civic issues — built with FastAPI, React Native, and MongoDB Atlas.
 
