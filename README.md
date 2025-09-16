@@ -1,8 +1,7 @@
-# 🏙️ Civic Issue App
+### 🏙️ Civic Issue App
 
 A mobile + backend platform that lets citizens report civic issues, track their resolution, and collaborate with local authorities. Built for Jharkhand & Bihar communities.  
 
----
 
 ## 🚀 Features
 
@@ -163,9 +162,4 @@ Open source under the [MIT License](LICENSE).
 
 > A citizen-driven platform to report, track, and resolve civic issues — built with FastAPI, React Native, and MongoDB Atlas.
 
-```
-
----
-
-Do you also want me to **add shields.io badges** (Python, FastAPI, MongoDB, React Native, License) at the top so your README looks more professional?
 ```
